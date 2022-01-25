@@ -1,0 +1,148 @@
+{
+
+    "label":"选择人员",
+    "separator": ",",
+    "saveHandle": "saveMember",
+    "cancelHandle": "cancelMember",
+    "tree":{
+        "width": "20%",
+        "selectedProp": "label",
+        "nodeKey": "id",
+        "dataSource":{
+            "dataList": [
+                {
+                    "id": 1 ,
+                    "label": "常委会组成人员",
+                    "disabled": false,
+                    "from": "json",
+                    "searchParam": "isStandingCommittee",
+                    "value": 1,
+                    "isLeaf": true
+                },
+                {
+                    "id": 10 ,
+                    "label": "代表组",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_DBZ",
+                    "searchParam": "memGroup",
+                    "value":"all"
+                },
+                {
+                    "id": 20 ,
+                    "label": "专委会",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_ISZWCY",
+                    "searchParam": "spcPosition",
+                    "value":"all"
+                },
+                {
+                    "id": 30 ,
+                    "label": "工委",
+                    "disabled": true,
+                    "from": "outApi",
+                    "searchParam": "wcPosition",
+                    "value":"all",
+                    "options":{
+                        "url": "/private/iCore/dictionary/getListByParentCode",
+                        "code": "UNPC_ISGW",
+                        "params": "code",
+                        "label": "name"
+                    }
+                },
+                {
+                    "id": 40 ,
+                    "label": "党派",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_DP",
+                    "searchParam": "partyName",
+                    "value":"all"
+                },
+                {
+                    "id": 50 ,
+                    "label": "专业组名称",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_ZYZMC",
+                    "searchParam": "professionalGroup",
+                    "value":"all"
+                },
+                {
+                    "id": 60 ,
+                    "label": "镇人大主席、副主席",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_ZRDZXFZX",
+                    "searchParam": "townNpcName",
+                    "value":"all"
+                },
+                {
+                    "id": 70 ,
+                    "label": "街工委",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_JGW",
+                    "searchParam": "swcPosition",
+                    "value":"all"
+                },
+                {
+                    "id": 99 ,
+                    "label": "自定义分组",
+                    "disabled": true,
+                    "from": "outApi",
+                    "searchParam": "customGroup",
+                    "value":"all",
+                    "options":{
+                        "url": "/private/unpc/memberGroup/getAllGroupName",
+                        "groupName": "all",
+                        "params": "groupName",
+                        "label": "groupName"
+                    }
+                }
+            ]
+        }
+    },
+    "selectArea":{
+        "isSearchShow": true,
+        "searchContent": {"title": "姓名", "placeholder": "请输入代表姓名", "type": "input", "prop": "memName","handle": "queryMember"},
+        "isAdvanceSearchShow": true,
+        "advanceSearchLable": "80px",
+        "advanceSearchContent": [
+            {
+                "category": "input","label":"代表编号","col": 12,"prop":"memNo","visible":true,
+                "basic":{"placeholder":"代表编号","type":"text"}
+            },
+            {
+                "label":"届次","col": 12, "prop":"memTerm","category": "select", "visible":true,
+                "basic":{"placeholder":"届次", "disabled": false, "size": "normal","filterable":true},
+                "options":{"label":"description","value":"description"},
+                "dataSource":{"dataList":[],"url":"/private/unpc/termTime/dropDownBox"}
+            }
+        ],
+        "advanceSearchBtns": [
+            {"label":"查询","type": "primary", "handle":"queryMember", "visible": true},
+            {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+        ],
+        "showCheckBox": true,
+        "tableHeadAlign": "center",
+        "width": "60%",
+        "apiParams": "type",
+        "handle": "queryMember",
+        "showProp":"memName",
+        "keyProp":"memGuid",
+        "saveGroup":{
+            "visible":true,
+            "handler":"saveMemGroup",
+            "delHandler":"delMemGroup"
+        },
+        "tableColumn":[
+            {"type":"selection","width":"60", "align": "center", "visible": true},
+            {"label":"编号","prop":"memNo", "align": "center", "visible": true},
+            {"label":"姓名","prop":"memName", "width":"120", "align": "center", "visible": true},
+            {"label":"代表组","prop":"memGroup", "align": "center", "visible": true}
+        ]
+    }
+}
+

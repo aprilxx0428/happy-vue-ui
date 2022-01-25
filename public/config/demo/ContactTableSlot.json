@@ -1,0 +1,21 @@
+{   
+    "isSearchShow": false,
+    "isSearchContentShow": true,
+    "isOperatorBtnsShow": false,
+    "isPaginationShow": false,
+    "isAdvanceSearchShow": false,
+    "showCheckBox": true,
+    "tableHeadAlign": "center",
+    "isShowTableOperatorBtns": true,
+    "tableColumn":[
+        {"type":"selection","width":"60", "align": "center", "visible": false},
+        {"label":"序","type":"index", "width": "60", "align": "center", "visible": true},
+        {"label":"参与单位","prop":"unitName", "align": "left", "isNeedEdit": true,"visible": true},
+        {"label":"参与人员","prop":"contactUserName", "align": "left","isNeedEdit": true,"visible": true},
+        {"label":"职务","prop":"contactPost", "align": "left","isNeedEdit": true, "visible": true}
+    ],
+    "operatorBtnsAlign": "center",
+    "operatorBtns":[
+        {"label":"删除","icon":"iconshanchu", "handle":"handleDeleteContact", "visible": true}
+    ]
+}

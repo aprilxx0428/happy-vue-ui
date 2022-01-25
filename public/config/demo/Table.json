@@ -1,0 +1,45 @@
+{   
+    "isSearchShow": true,
+    "isSearchContentShow": true,
+    "isOperatorBtnsShow": true,
+    "isPaginationShow": true,
+    "searchContent": {"title": "姓名", "placeholder": "姓名", "type": "input", "prop": "name","handle":"handleAdvanceSearch"},
+    "searchBtns": [
+        {"label":"新增","type": "primary", "handle":"handleAdd", "visible": true},
+        {"label":"批量删除","type": "danger", "handle":"handleBatchDelete", "visible": true}
+    ],
+    "isAdvanceSearchShow": true,
+    "advanceSearchLable": "100px",
+    "advanceSearchContent": [
+        {
+            "category": "input","label":"姓名","col": 12,"prop":"name","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text"}
+        },
+        {
+            "category": "slot","slotName":"list2","label":"","visible":true
+        }
+    ],
+    "advanceSearchBtns": [
+        {"label":"查询","type": "primary", "handle":"handleAdvanceSearch", "visible": true},
+        {"label":"导出","type": "primary", "handle":"handleExport", "visible": true},
+        {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+    ],
+    "table":{
+        "showHeader":false,
+        "isShowTableOperatorBtns": true,
+        "tableColumn":[
+            {"label":"id","prop":"id","width":"150","distinct": true},
+            {"label":"姓名","prop":"name","width":"200","distinct": true},
+            {"label":"数据1","prop":"amount1"},
+            {"label":"数据2","prop":"amount2"},
+            {"label":"数据3","prop":"amount3"}
+        ],
+        "operatorBtnsAlign": "center",
+        "operatorBtns":[
+            {"label":"查看","icon":"iconchakan","handle":"handleShow", "visible": true
+            },
+            {"label":"编辑","icon":"iconedit","handle":"handleEdit", "visible": false},
+            {"label":"删除","icon":"iconshanchu", "handle":"handleDelete", "visible": false}
+        ]
+    }
+}

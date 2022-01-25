@@ -1,0 +1,52 @@
+{   
+    "isSearchShow": false,
+    "isSearchContentShow": true,
+    "isOperatorBtnsShow": false,
+    "isPaginationShow": false,
+    "searchContent": {"title": "标题", "placeholder": "标题", "type": "input", "prop": "title","handle":"handleAdvanceSearch"},
+    "searchBtns": [
+        {"label":"新增","type": "primary", "handle":"handleAdd", "visible": true},
+        {"label":"批量删除","type": "danger", "handle":"handleBatchDelete", "visible": true}
+    ],
+    "isAdvanceSearchShow": true,
+    "advanceSearchLable": "100px",
+    "advanceSearchContent": [
+        {
+            "category": "input","label":"标题","col": 12,"prop":"title","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text"}
+        },
+        {
+            "category": "date","label":"通知时间","col": 12, "prop":"dateRange","startProp":"startDateTime","endProp":"endDateTime", "visible":true, 
+            "basic":{"type":"daterange","placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd","valueformat":"yyyy-MM-dd","align": "center"}
+        },
+        {
+            "category": "input","label":"内容","col": 12,"prop":"content","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text"}
+        }
+    ],
+    "advanceSearchBtns": [
+        {"label":"查询","type": "primary", "handle":"handleAdvanceSearch", "visible": true},
+        {"label":"导出","type": "primary", "handle":"handleExport", "visible": true},
+        {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+    ],
+    "showCheckBox": true,
+    "tableHeadAlign": "center",
+    "isShowTableOperatorBtns": false,
+    "tableColumn":[
+        {"type":"selection","width":"60", "align": "center", "visible": false},
+        {"label":"序","type":"index", "width": "60", "align": "center", "visible": true},
+        {"label":"标题","prop":"title", "width": "300", "align": "left","isNeedClick":"true","handle":"toLink","hoverCss":"hoverRed","visible": true},
+        {"label":"公告时间","prop":"noticeTime", "width":"120", "align": "left", "visible": true},
+        {"label":"公告范围","prop":"range", "width":"220", "align": "left","isEllipsis": false, "visible": true},
+        {"label":"排序号","prop":"sequence", "align": "center", "visible": false, "isNeedEdit": true, "handle":"tableInputBlur"},
+        {"label":"是否置顶","prop":"isTopText", "align": "center", "visible": true},
+        {"label":"发布人","prop":"createUserAccout", "align": "center", "visible": true},
+        {"label":"发布时间","prop":"startDateTime", "visible": false, "align": "center"}
+    ],
+    "operatorBtnsAlign": "center",
+    "operatorBtns":[
+        {"label":"查看","icon":"iconchakan","handle":"handleShow", "visible": false},
+        {"label":"编辑","icon":"iconedit","handle":"handleEdit", "visible": true},
+        {"label":"删除","icon":"iconshanchu", "handle":"handleDelete", "visible": true}
+    ]
+}

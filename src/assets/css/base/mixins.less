@@ -1,0 +1,12 @@
+/*包含页面多个less Mixins的集合*/
+
+//多行裁剪 @axLine 默认裁剪2行，可变参数
+.line-clamp(@MaxLine:2){
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: @MaxLine;
+  -webkit-box-orient: vertical;
+}

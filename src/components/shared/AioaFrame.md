@@ -1,0 +1,2 @@
+# AioaFrame
+提供包装的iframe组件，提供了`SetIFrameHeightMessageAction`，可以自适应页面高度。 关于[`SetIFrameHeightMessageAction更多信息`](../../common/client/FrameClient.md). 同时提供了[`FrameClient`](../../common/client/FrameClient.md)相互操作

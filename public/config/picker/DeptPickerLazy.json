@@ -1,0 +1,21 @@
+{
+    "label":"选择组织",
+    "separator": ",",
+    "saveHandle": "saveDept",
+    "cancelHandle":"cancelDept",
+    "tree":{
+        "selectedProp": ["label"],
+        "nodeKey": "label",
+        "dataSource":{
+            "dataList": [
+                {
+                    "id": 20 ,
+                    "label": "组织单位",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_ZZDW"
+                }
+            ]
+        }
+    }
+}

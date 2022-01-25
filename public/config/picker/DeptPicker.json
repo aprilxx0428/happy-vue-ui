@@ -1,0 +1,19 @@
+{
+    "label":"选择组织",
+    "separator": ",",
+    "saveHandle": "saveDept",
+    "cancelHandle":"cancelDept",
+    "tree":{
+        "selectedProp": ["name","code"],
+        "propName": ["name","code"],
+        "nodeKey": "code",
+        "showProp": "name",
+        "dataSource":{
+            "from": "dictionary",
+            "code": "UNPC_ZZDW",
+            "onlyEndCheck": "true",
+            "dataList": [
+            ]
+        }
+    }
+}

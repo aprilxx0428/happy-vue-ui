@@ -1,0 +1,504 @@
+{
+    "header":"公告栏信息发布",
+    "labelWidth":"150px",
+    "loadingText":["拼命保存中...","正在删除中...","正在处理中..."],
+    "loadingBackground":"rgba(255,255,255, 0.8)",
+    "form":[
+        {
+            "category":"area","label":"审核申请内容","showLabel":false,"labelWidth":"0px","visible":true
+        },
+        {
+            "category": "input","label":"input文本框","col": 24,"prop":"demo_input","visible":true,"labelSlotName":"labelSlot",
+            "basic":{"placeholder":"请输入文本框内容","type":"text"},
+            "rules":[
+                {"required": true,"message": "请输入标题","trigger": "blur"},
+                {"max": 5, "message": "最多五个字","trigger": "blur" }
+            ]
+        },
+        {
+            "category": "input","label":"前后缀input文本框","col": 24,"prop":"demo_input_prepred","visible":true,
+            "basic":{"placeholder":"请输入文本框内容，最长五个字符","type":"text","maxlength":"5","minlength":"3",
+                "slot":[
+                    {"position":"prepend","slotText":"http://","slotProp":"slotValue"},
+                    {"position":"append","slotText":".com","slotProp":"slotValue"}
+                ]
+            },
+            "rules":{"required": true,
+                "message": "请输入标题",
+                "trigger": "blur"}
+        },
+        {
+            "category": "input","label":"后缀input文本框","col": 24,"prop":"demo_input_append","visible":true,
+            "basic":{"placeholder":"请输入文本框内容，最长十个字符","type":"text","maxlength":"10",
+                "slot":[
+                    {"position":"append","slotText":".com","slotProp":"slotValue"}
+                ]
+            },
+            "rules":{"required": true,
+                "message": "请输入标题",
+                "trigger": "blur"}
+        },
+        {
+            "category": "input","label":"只读文本框","col": 24,"prop":"demo_input_readonly","readOnly":false,"visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text","readonly":true},
+            "rules":{"required": false,
+                "message": "请输入标题",
+                "trigger": "blur"}
+        },
+
+        {
+            "category": "number","label":"排序","col": 24,"prop":"demo_number","readOnly":false,"visible":true,
+            "basic":{"label":"请输入数字","min":0,"max":99999,"defaultNumber":99}
+        },
+        {
+            "category": "input","label":"input多行文本框","col": 24,"prop":"demo_input2","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"textarea","rows":5},
+            "rules":[{"required": false,
+                "message": "请输入标题",
+                "trigger": "blur"},
+                {
+                    "min": 0, "max": 15, "message": "长度在 10 到 15 个字符","trigger": "blur" 
+               }]
+        },
+        {
+            "category": "label","label":"","col": 12,"prop":"demo_input","text":"label内容","labelWidth":"10px","style":"color:red","visible":true
+        },
+        {
+            "category": "label","label":"label","col": 12,"prop":"demo_input","visible":true,"text":"label2内容","style":"color:red"
+        },
+        {
+            "category": "date","label":"单日期date","col": 12, "prop":"demo_date","readOnly":false, "visible":true, 
+            "basic":{"type":"date","placeholder":"选择日期","editable":true, "clearable": true, "size": "large", "format":"yyyy-MM-dd","valueformat":"yyyy-MM-dd","align": "center"}, 
+            "rules":{
+                "required": false, "message": "请选择日期", "trigger": "change"
+            }
+        },
+        {
+            "category": "avatar","label":"", "prop":"memPhoto","col":12,"visible":true,
+            "basic":{"shape":"square","src":""}
+        },
+        {
+            "category": "date","label":"单日期dateti","col": 12, "prop":"demo_datetime","visible":true, 
+            "basic":{"type":"datetime", "placeholder":"选择日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd HH:mm:ss","valueformat":"yyyy-MM-dd HH:mm:ss","align": "center"}, 
+            "rules":{
+               "required": false, "message": "请选择日期", "trigger": "change"
+            }
+        },
+        {
+            "category": "span","col":12, "style":"height:40px","visible":true
+        },
+        {
+            "category": "date","label":"日期段","col": 12, "prop":"demo_dateRange","startProp":"demo_dateRangeStart","endProp":"demo_dateRangeEnd", "visible":true, 
+            "basic":{"type":"daterange","placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd","valueformat":"yyyy-MM-dd","align": "center"},
+            "rules":{
+                "required": false, "message": "请选择日期", "trigger": "change"
+            }
+        },
+        {
+            "category": "span","col":12,"style":"height:40px","visible":true
+        },
+        {
+            "category": "date","label":"日期时间段","col": 12, "prop":"demo_dateTimeRange","startProp":"demo_dateTimeRangeStart","endProp":"demo_dateTimeRangeEnd","visible":true, 
+            "basic":{"type":"datetimerange", "placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd HH:mm:ss","valueformat":"yyyy-MM-dd HH:mm:ss","align": "center"}, 
+            "rules":{
+                "required": false, "message": "请选择日期", "trigger": "change"
+            }
+        },
+        {
+            "category": "time","label":"timer","col": 24, "prop":"demo_time","startProp":"demo_timeStart","endProp":"demo_timeEnd", "visible":true, 
+            "basic":{"type":"datetimerange","placeholder":"选择时间","isRange":true,"pickerOptions":{
+                "selectableRange": "8:30:00 - 20:30:00"
+            },"rangeSeparator": "-", "startPlaceholder": "","endPlaceholder": "","editable":true, "clearable": true, "size": "small", "format":"HH:mm:ss","valueformat":"HH:mm:ss","align": "center"},
+            "rules":{
+               "required": false, "message": "请选择时间", "trigger": "change"
+            }
+        },
+        {
+            "label":"事件联动单选框","col": 24, "prop":"demo_radio","category": "radio", "visible":true,"handle":"changeInputStatus",
+            "options":{"label":"name","value":"value"},
+            "dataSource":{"from":"dictionary","code": "UNPC_NoticeRange"},
+            "rules":{
+                "required": false, "message": "请选择公告范围", "trigger": "change"
+            }
+        },
+        {
+            "category": "input","label":"我是被联动的","col": 24,"prop":"demo_inputWithRadio","visible":true,
+            "basic":{"placeholder":"事件联动单选框联动input是否可见","type":"text"},
+            "rules":{"required": false,
+                "message": "请输入标题",
+                "trigger": "blur"}
+        },
+        {
+            "label":"单选框2","col": 24, "prop":"demo_radio2","category": "radio", "visible":true,
+            "options":{"label":"name","value":"value"},
+            "dataSource":{"from":"dictionary","code": "UNPC_DutyType"},
+            "rules":{
+                "required": false, "message": "请选择履职类型", "trigger": "change"
+            }
+        },
+        {
+            "label":"配置中绑定数据源单选框","col": 24, "prop":"demo_radio3","category": "radio","visible":true,
+            "options":{"label":"text1","value":"val"},
+            "dataSource":{"dataList":[{"text1":"显示的文本","val":"1"},{"text1":"显示的文本2222","val":"2"}]},
+            "rules":{
+                "required": false, "message": "请选择履职类型", "trigger": "change"
+            }
+        },
+        {
+            "label":"开关设置","col": 24, "prop":"demo_switch","category": "switch", "visible":true,
+            "basic":{"activeText": "是","inactiveText":"否","activeColor":"#13ce66","inactiveColor":"#aaa","activeValue":1,"inactiveValue":0},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "category": "label","label":"","col": 24,"prop":"demo_input","text":"-----------height自定义的组件start-----------","labelWidth":"0px","style":"color:red;text-align:center;font-size:20px;","visible":true
+        },
+        {
+            "label":"事件联动单选框","col": 24, "prop":"demo_radio","category": "radio", "visible":true,"handle":"changeInputStatus","style":"margin-bottom:-10px",
+            "options":{"label":"name","value":"value"},
+            "dataSource":{"from":"dictionary","code": "UNPC_NoticeRange"},
+            "rules":{
+                "required": false, "message": "请选择公告范围", "trigger": "change"
+            }
+        },
+        {
+            "category": "input","label":"我是被联动的","col": 24,"prop":"demo_inputWithRadio","visible":true,"style":"margin-bottom:-10px",
+            "basic":{"placeholder":"事件联动单选框联动input是否可见","type":"text"},
+            "rules":{"required": false,
+                "message": "请输入标题",
+                "trigger": "blur"}
+        },
+        {
+            "label":"单选框2（disabled）","col": 24, "prop":"demo_radio2","category": "radio","disabled":true, "visible":true,"style":"margin-bottom:-10px",
+            "options":{"label":"name","value":"value"},
+            "dataSource":{"from":"dictionary","code": "UNPC_DutyType"},
+            "rules":{
+                "required": false, "message": "请选择履职类型", "trigger": "change"
+            }
+        },
+        {
+            "label":"值为number的radio","col": 24, "prop":"demo_radio4","category": "radio","visible":true,"style":"margin-bottom:-10px",
+            "options":{"label":"text1","value":"val"},
+            "dataSource":{"dataList":[{"text1":"显示的文本","val":0},{"text1":"显示的文本2222","val":1}]},
+            "rules":{
+                "required": false, "message": "请选择履职类型", "trigger": "change"
+            }
+        },
+        {
+            "label":"开关设置","col": 24, "prop":"demo_switch","category": "switch", "visible":true,"style":"margin-bottom:-10px",
+            "basic":{"activeText": "是","inactiveText":"否","activeColor":"#13ce66","inactiveColor":"#aaa","activeValue":1,"inactiveValue":0},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "category": "label","label":"","col": 24,"prop":"demo_label","text":"-----------height自定义的组件end-----------","labelWidth":"0px","style":"color:red;text-align:center","visible":true
+        },
+        {
+            "label":"开关2","col": 24, "prop":"demo_switch2","category": "switch", "visible":true,
+            "basic":{"activeText": "100","inactiveText":"1","activeColor":"#409EFF","inactiveColor":"#aaa","activeValue":100,"inactiveValue":1}
+        },
+        {
+            "label":"事件联动的下拉框","col": 8, "prop":"demo_funselect","category": "select","handle":"disiableNext", "visible":true,
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","filterable":true},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{"dataList":[{"text":"是","val":"1"},{"text":"否","val":"0"}]},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"","col": 8, "prop":"demo_funselect1","category": "select", "visible":true,"labelWidth":"20px",
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","filterable":true},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{"dataList":[{"text":"下拉框1","val":"1"},{"text":"下拉框2","val":"2"},{"text":"下拉框3","val":"3"}]},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"","col": 8, "prop":"demo_funselect2","category": "select", "visible":true,"labelWidth":"20px",
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","filterable":true},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{"dataList":[{"text":"主席","val":"主席"},{"text":"副主席","val":"副主席"}]},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"单个下拉框","col": 24, "prop":"demo_select","category": "select", "visible":true,
+            "basic":{"placeholder":"请选择", "disabled": true, "size": "small","filterable":true},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{"dataList":[{"text":"下拉框1","val":"1"},{"text":"下拉框2","val":"2"},{"text":"下拉框3","val":"3"}]},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"下拉框多选","col": 24, "prop":"demo_select_multiple","category": "select", "visible":true,
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","filterable":true,"multiple":true},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{"dataList":[{"text":"下拉框1","val":"1"},{"text":"下拉框2","val":"2"},{"text":"下拉框3","val":"3"}]},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"单个下拉框2","col": 24, "prop":"demo_select2","category": "select","visible":true,
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","filterable":true},  
+            "dataSource":{"from":"dictionary","code":"UNPC_MYD"},
+            "options":{"label":"name","value":"name"}
+        },
+        {
+            "label":"数据联动下拉框","col": 24, "prop":"demo_cascader","model":"demo_cascader1","category": "cascader", "visible":true,
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","clearable": true,"separator":"-"}, 
+            "dataSource":{"from":"dictionary","code":"UNPC_DutyType"},
+            "options":{"label":"name","value":"name"},
+            "rules":{
+                "required": true,"type":"array", "message": "请选择", "trigger": "blur"
+            }
+        },
+        {
+            "label":"多选框","col": 24, "prop":"demo_checkbox","model":"demo_ckeckbox_model","category": "checkbox","separator":",","visible":true,
+            "dataSource":{"from":"dictionary","code":"InfoStatus"},
+            "options":{"label":"name","value":"value"},
+            "rules":{
+                "required": false,"type":"array", "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"多选框disabled","col": 24, "prop":"demo_checkbox","model":"demo_ckeckbox_model","category": "checkbox","separator":",","disabled":true,"visible":true,
+            "dataSource":{"from":"dictionary","code":"InfoStatus"},
+            "options":{"label":"name","value":"value"},
+            "rules":{
+                "required": false,"type":"array", "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"多选框2","col": 12, "prop":"demo_checkbox2","model":"demo_checkbox2_model","category": "checkbox","separator":",","visible":true,
+            "dataSource":{"dataList":[{"name1":"选择1","value1":"1"},{"name1":"选择2","value1":"2"},{"name1":"选择3","value1":"3"}]},
+            "options":{"label":"name1","value":"value1"},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "category": "slot","slotName":"list","label":"slot列表","visible":true
+        },
+        {
+            "category": "slot","slotName":"list2","label":"","visible":true
+        },
+        {
+            "category": "input","label":"机关人员（仅一位）","col":16,"prop":"pickOfficeUserInput","visible":true,
+            "basic":{"placeholder":"请选择机关人员","type":"textarea","rows": 4,"width":"500px"}
+        },
+        {
+            "category":"button","label":"","col":3,"handle":"pickOfficeUser","labelWidth":"10px","visible":true,
+            "basic":{
+                "type":"primary","label":"选择人员","size":"mini","style":"margin-top:65px;"
+            }
+        },
+        {
+            "category": "input","label":"邀请代表（最多十五位）","col":16,"prop":"pickUserInput","visible":true,
+            "basic":{"placeholder":"请选择邀请代表","type":"textarea","rows": 4,"width":"500px"}
+        },
+        {
+            "category":"button","label":"","col":3,"handle":"pickMember","labelWidth":"10px","visible":true,
+            "basic":{
+                "type":"primary","label":"选择人员","size":"mini","style":"margin-top:65px;"
+            }
+        },
+        {
+            "label":"选择机关人员(废弃)","col": 24,"prop":"demo_chooseUsers","category": "choose", "visible":true,
+            "basic":{
+                "input":{"placeholder":"请选择机关人员","type":"textarea", "rows": 4,"width":"500px"},
+                "button":{
+                    "label":"选择人员",
+                    "handle":"choosePeopleHandler",
+                    "type":"primary",
+                    "size": "mini"
+                },
+                "dataOptions":{
+                    "jsonProps":["id","name"],
+                    "showProp":"name"
+                },
+                "dialog":{
+                    "label":"选择人员",
+                    "separator": ",",
+                    "saveHandle": "saveOfficeUsers",
+                    "tree":{
+                        "width": "20%",
+                        "selectedProp": "label",
+                        "nodeKey": "id",
+                        "dataSource":{
+                            "dataList": [
+                                {
+                                    "id": 3 ,
+                                    "label": "全体机关人员",
+                                    "disabled": true,
+                                    "from": "json",
+                                    "searchParam": "type",
+                                    "children": [{
+                                        "id": 4 ,
+                                        "label": "人大机关",
+                                        "disabled": false
+                                        }, {
+                                        "id": 5,
+                                        "label": "街镇",
+                                        "disabled": false
+                                        }
+                                    ]  
+                                },
+                                {
+                                    "id": 10 ,
+                                    "label": "代表组",
+                                    "disabled": true,
+                                    "from": "dictionary",
+                                    "code": "UNPC_DBZ",
+                                    "searchParam": "userUnit"
+                                },
+                                {
+                                    "id": 20 ,
+                                    "label": "专委会",
+                                    "disabled": true,
+                                    "from": "dictionary",
+                                    "code": "UNPC_ISZWCY",
+                                    "searchParam": "name"
+                                },
+                                {
+                                    "id": 30 ,
+                                    "label": "工会",
+                                    "disabled": true,
+                                    "from": "outApi",
+                                    "searchParam": "account",
+                                    "options":{
+                                        "url": "http://192.168.12.117:2001/api/private//iCore/dictionary/getListByParentCode",
+                                        "code": "UNPC_ISGW",
+                                        "params": "code",
+                                        "label": "name"
+                                    }
+                                }	
+                                
+                            ]
+                        }
+                    },
+                    "selectArea":{
+                        "isSearchShow": true,
+                        "searchContent": {"title": "姓名", "placeholder": "请输入姓名", "type": "input", "prop": "name","handle": "queryOfficeUsers"},
+                        "isAdvanceSearchShow": true,
+                        "advanceSearchLable": "80px",
+                        "advanceSearchContent": [
+                            {
+                                "category": "input","label":"人员类别","col": 12,"prop":"type","visible":true,
+                                "basic":{"placeholder":"请输入人员类别","type":"text"}
+                            },
+                            {
+                                "category": "input","label":"姓名","col": 12,"prop":"name","visible":true,
+                                "basic":{"placeholder":"请输入姓名","type":"text"}
+                            },
+                            {
+                                "label":"人员类别","col": 24, "prop":"type","category": "select", "visible":true,
+                                "basic":{"placeholder":"请选择", "disabled": false, "size": "normal","filterable":true},
+                                "options":{"label":"text","value":"val"},
+                                "dataSource":{"dataList":[{"text":"全部","val":""},{"text":"人大机关","val":"人大机关"},{"text":"街镇","val":"街镇"}]}
+                            }
+                        ],
+                        "advanceSearchBtns": [
+                            {"label":"查询","type": "primary", "handle":"queryOfficeUsers", "visible": true},
+                            {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+                        ],
+                        "showCheckBox": true,
+                        "tableHeadAlign": "center",
+                        "width": "60%",
+                        "apiParams": "type",
+                        "handle": "queryOfficeUsers",
+                        "tableColumn":[
+                            {"type":"selection","width":"60", "align": "center", "visible": true},
+                            {"label":"人员类别","prop":"type", "align": "center", "visible": true},
+                            {"label":"姓名","prop":"name", "width":"120", "align": "center", "visible": true},
+                            {"label":"科室","prop":"userPost", "align": "center", "visible": true}
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "category": "input","label":"选择镇代表(至少选一个)","col":16,"prop":"demo_chooseTownUsersInput","visible":true,
+            "basic":{"placeholder":"选择镇代表","type":"textarea","rows": 4,"width":"500px"}
+        },
+        {
+            "category":"button","label":"","col":3,"handle":"pickTownUser","labelWidth":"10px","visible":true,
+            "basic":{
+                "type":"primary","label":"选择人员","size":"mini","style":"margin-top:65px;"
+            }
+        },
+        {
+            "category": "slot","col":20,"slotName":"townMemberlist","label":"","visible":true
+        },
+        {
+            "category": "input","label":"选择市代表","col":16,"prop":"demo_chooseCityMemberInput","visible":true,
+            "basic":{"placeholder":"选择市代表","type":"textarea","rows": 4,"width":"500px","readonly":true}
+        },
+        {
+            "category":"button","label":"","col":3,"handle":"pickCityMember","labelWidth":"10px","visible":true,
+            "basic":{
+                "type":"primary","label":"选择人员","size":"mini","style":"margin-top:65px;"
+            }
+        },
+        {
+            "category": "input","label":"选择组织","col":16,"prop":"demo_deptInput","visible":true,
+            "basic":{"placeholder":"选择组织","type":"text","width":"500px"}
+        },
+        {
+            "category":"button","label":"","col":3,"handle":"pickDept","labelWidth":"10px","visible":true,
+            "basic":{
+                "type":"primary","label":"选择组织","size":"mini"
+            }
+        },
+        {
+            "category": "input","label":"主办会办单位","col":16,"prop":"demo_mainMeetingInput","visible":true,
+            "basic":{"placeholder":"选择组织","type":"text","width":"500px"}
+        },
+        {
+            "category":"button","label":"","col":3,"handle":"pickMainMeeting","labelWidth":"10px","visible":true,
+            "basic":{
+                "type":"primary","label":"选择组织","size":"mini"
+            }
+        },
+        {
+            "category":"button","label":"","col":24,"handle":"pickContact","style":"margin-bottom:0px","visible":true,
+            "basic":{
+                "type":"primary","label":"添加沟通人员","size":"mini"
+            }
+        },
+        {
+            "category": "slot","slotName":"contactResult","col":24,"label":"","visible":true
+        },
+        {
+            "category":"nodeplan","label":"添加计划节点","col":24,"prop":"nodeplanList","visible":true
+        },
+        {
+            "category": "slot","slotName":"contactResult","col":24,"label":"","visible":true
+        },
+        {
+            "label":"内容","category":"editor","prop":"content","visible":true,"col":24,
+            "rules":[
+                {"required": true,"message": "请输入内容","trigger": "blur"},
+                {"max": 50, "message": "最多50个字","trigger": "blur" }
+            ]
+        },
+        {
+            "label":"附件上传","col": 24, "prop":"attachmentId","category": "file","refTableName": "UNPC_NOTICEINFO", "width":"600px", "visible":true
+        },
+        {
+            "label":"附件上传2","col": 24, "prop":"attachmentId2","category": "file","refTableName": "UNPC_NOTICEINFO_EX", "width":"600px", "visible":true
+        }
+
+    ],
+    "operatorBtns":[
+        {"label":"保 存","icon":"iconchakan","handle":"saveHandler","validate":true, "visible": true, "class":"primary"},
+        {"label":"删 除","icon":"iconshanchu", "handle":"deleteHandler", "visible": true,"class":"danger"},
+        {"label":"取 消","icon":"iconshanchu", "handle":"cancelHandler", "visible": true,"class":"default"}
+    ]
+}

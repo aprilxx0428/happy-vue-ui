@@ -1,0 +1,15 @@
+{   
+    "isShowTableOperatorBtns": true,
+    "isPaginationShow": true,
+    "tableColumn":[
+        {"type":"selection","align": "center", "visible": true},
+        {"label":"序","type":"index", "align": "center", "visible": true},
+        {"label":"账号","prop":"account", "align": "left","visible": true,"style":"color:pink"},
+        {"label":"姓名","prop":"userName","align": "left", "visible": true,"isNeedClick":"true","handle":"toLink","hoverCss":"hoverRed"},
+        {"label":"电话","prop":"mobile", "width":"100", "isEllipsis":true,"align": "center","visible": true}
+    ],
+    "operatorBtns":[
+        {"label":"编辑","icon":"iconedit","handle":"handleEdit", "visible": true,"width":"200"},
+        {"label":"删除","icon":"iconshanchu", "handle":"handleDelete", "visible": false}
+    ]
+}

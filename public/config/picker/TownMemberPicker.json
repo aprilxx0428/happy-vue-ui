@@ -1,0 +1,53 @@
+{
+    "label":"选择人员",
+    "separator": ",",
+    "saveHandle": "saveTownUsers",
+    "cancelHandle":"cancelTownUsers",
+    "tree":{
+        "width": "20%",
+        "selectedProp": "label",
+        "nodeKey": "id",
+        "dataSource":{
+            "dataList": [
+                {
+                    "id": 10 ,
+                    "label": "镇代表",
+                    "disabled": true,
+                    "from": "dictionary",
+                    "code": "UNPC_ZDB",
+                    "searchParam": "townType",
+                    "value":"all"
+                }
+            ]
+        }
+    },
+    "selectArea":{
+        "isSearchShow": true,
+        "searchContent": {"title": "姓名", "placeholder": "请输入代表姓名", "type": "input", "prop": "memName","handle": "queryTownUsers"},
+        "isAdvanceSearchShow": true,
+        "advanceSearchLable": "80px",
+        "advanceSearchContent": [
+            {
+                "category": "input","label":"代表编号","col": 12,"prop":"memNo","visible":true,
+                "basic":{"placeholder":"请输入代表编号","type":"text"}
+            }
+        ],
+        "advanceSearchBtns": [
+            {"label":"查询","type": "primary", "handle":"queryTownUsers", "visible": true},
+            {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+        ],
+        "showCheckBox": true,
+        "tableHeadAlign": "center",
+        "width": "60%",
+        "apiParams": "type",
+        "handle": "queryTownUsers",
+        "showProp":"memName",
+        "keyProp":"memGuid",
+        "tableColumn":[
+            {"type":"selection","width":"60", "align": "center", "visible": true},
+            {"label":"编号","prop":"memNo", "width":"100","align": "center", "visible": true},
+            {"label":"姓名","prop":"memName", "align": "center", "visible": true},
+            {"label":"手机号","prop":"mobile", "align": "center", "visible": true}
+        ]
+    }
+}

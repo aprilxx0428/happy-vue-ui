@@ -1,0 +1,478 @@
+.cascader .el-input__inner::-webkit-input-placeholder {
+  color: #333;
+}
+.cascader .el-input__inner::-moz-input-placeholder {
+  color: #333;
+}
+.cascader .el-input__inner::-o-input-placeholder {
+  color: #333;
+}
+.cascader .el-input__inner::-ms-input-placeholder {
+  color: #333;
+}
+.nodeplanBox .el-table {
+  border-top: 1px solid #ebeef5 !important;
+  border-left: 1px solid #ebeef5 !important;
+}
+.nodeplanBox .el-table::before {
+  width: 0;
+}
+.nodeplanBox .el-table td,
+.nodeplanBox .el-table th.is-leaf {
+  border-bottom: 1px solid #ebeef5 !important;
+  border-right: 1px solid #ebeef5 !important;
+}
+.nodeplanBox .el-checkbox__inner {
+  width: 16px;
+  height: 16px;
+}
+.nodeplanBox .el-checkbox__inner::after {
+  top: 2px;
+  left: 5px;
+}
+.nodeplanBox .page-wrap {
+  padding: 30px 0;
+}
+.nodeplanBox .el-pagination {
+  text-align: center;
+  color: #000;
+}
+.nodeplanBox .el-pagination .el-pagination__total,
+.nodeplanBox .el-pager .number {
+  font-size: 15px;
+}
+.nodeplanBox .el-pager .number {
+  font-weight: normal;
+}
+.nodeplanBox .el-pagination button span {
+  padding: 0 10px;
+}
+.nodeplanBox .el-table__row:hover > td {
+  background-color: white;
+}
+.bv-upload__tip {
+  margin-left: 10px;
+  display: inline-block;
+}
+.bv-upload__simple {
+  display: inline-block;
+}
+.bv-upload .el-upload-list__item .el-upload-list__item-name {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  margin-right: 20px;
+  width: auto;
+}
+.bv-upload .el-upload-list__item .el-upload-list__item-name .el-upload-file-icon {
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.bv-upload .el-upload-list__item .el-upload-list__item-status-label {
+  display: inline-block;
+}
+.bv-upload .el-upload-list__item .bv-upload-list__item-download,
+.bv-upload .el-upload-list__item .el-upload-list__item-status-label,
+.bv-upload .el-upload-list__item .el-icon-close {
+  position: static;
+  vertical-align: middle;
+  margin-right: 7px;
+  color: #999;
+}
+.bv-upload .el-upload-list__item:hover {
+  background-color: transparent;
+}
+.bv-upload .el-upload-list__item:hover .el-icon-close {
+  display: inline-block;
+}
+.bv-upload .el-upload-list__item.is-success .el-upload-list__item-status-label {
+  display: inline-block;
+}
+.bv-upload__detail .el-upload--text {
+  display: none !important;
+}
+.bv-upload__detail .el-upload-list__item {
+  line-height: 26px;
+}
+.bv-upload__detail .el-upload-list__item:hover {
+  background-color: transparent;
+}
+.bv-upload__detail .el-upload-list__item:hover .el-icon-close,
+.bv-upload__detail .el-upload-list__item:hover .el-icon-close-tip {
+  display: none;
+}
+.bv-upload__detail .el-upload-list__item .el-icon-close-tip {
+  display: none !important;
+}
+.bv-upload__detail .el-upload-list__item .el-upload-list__item-name {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  margin-right: 20px;
+  width: auto;
+}
+.bv-upload__detail .el-upload-list__item .el-upload-list__item-name .el-upload-file-icon {
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.bv-upload-list__item-download {
+  top: 0;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+.choosePeoplePageList .searchDiv .search {
+  background: #fff;
+  padding: 15px;
+  min-height: 33px;
+}
+.choosePeoplePageList .searchDiv .search .searchLeft .el-input {
+  width: 220px;
+  height: 35px;
+}
+.choosePeoplePageList .searchDiv .search .searchLeft p.searchBth {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.choosePeoplePageList .searchDiv .search .searchBtns {
+  margin-top: 5px;
+}
+.choosePeoplePageList .searchDiv .AdvanceSearch {
+  background-color: #fff;
+  padding: 20px 15px 1px;
+  margin-bottom: 12px;
+}
+.choosePeoplePageList .searchDiv .AdvanceSearch .AdvanceSearchItem .el-form-item__label {
+  line-height: 1.3;
+  margin-top: 13px;
+}
+.choosePeoplePageList .searchDiv .AdvanceSearch .AdvanceSearchBthClass {
+  text-align: right;
+  margin-top: 10px;
+}
+.choosePeoplePageList .searchDiv .el-date-editor--datetimerange.el-input,
+.choosePeoplePageList .searchDiv .el-date-editor--datetimerange.el-input__inner {
+  width: 100%;
+}
+.choosePeoplePageList .el-table {
+  border-top: 1px solid #ebeef5 !important;
+  border-left: 1px solid #ebeef5 !important;
+}
+.choosePeoplePageList .el-table::before {
+  width: 0;
+}
+.choosePeoplePageList .el-table td,
+.choosePeoplePageList .el-table th.is-leaf {
+  border-bottom: 1px solid #ebeef5 !important;
+  border-right: 1px solid #ebeef5 !important;
+}
+.choosePeoplePageList .handBthList .handBthItem {
+  cursor: pointer;
+}
+.choosePeoplePageList .handBthList .handBthItem span {
+  vertical-align: middle;
+}
+.choosePeoplePageList .handBthList .handBthItem span.icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.choosePeoplePageList .handBthList .handBthItem + .handBthItem {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.choosePeoplePageList .page-wrap {
+  padding: 20px 0;
+}
+.choosePeoplePageList .el-pagination {
+  text-align: center;
+  color: #000;
+}
+.choosePeoplePageList .el-pagination .el-pagination__total,
+.choosePeoplePageList .el-pager .number {
+  font-size: 13px;
+}
+.choosePeoplePageList .el-pager .number {
+  font-weight: normal;
+}
+.choosePeoplePageList .el-pagination button span {
+  padding: 0 10px;
+  font-size: 13px !important;
+}
+.deptPicker {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.deptPicker .left {
+  float: left;
+  width: 59%;
+  position: relative;
+  height: 100%;
+  border-right: 1px solid #e0e0e0e0;
+}
+.deptPicker .left .search {
+  position: absolute;
+  width: calc(100% - 60px);
+  top: 15px;
+  margin: 5px 30px;
+}
+.deptPicker .left .tree {
+  position: absolute;
+  width: calc(100% - 40px);
+  top: 50px;
+  bottom: 100px;
+  margin: 20px;
+  height: calc(100% - 120px);
+  overflow: scroll;
+}
+.deptPicker .left .el-select {
+  width: 100%;
+}
+.deptPicker .right {
+  width: 40%;
+  height: calc(100% - 100px);
+}
+.deptPicker .btnBox {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+}
+.selectedBox {
+  width: 100%;
+  height: 100%;
+}
+.selectedBox .choosePeopleTitle {
+  padding: 18px 10px;
+  height: 64px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.selectedBox .choosePeopleTitle_number {
+  padding-bottom: 10px;
+}
+.selectedBox .peoplelist {
+  padding: 10px 0 10px 10px;
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+}
+.selectedBox .peopleitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5;
+  margin-right: 10px;
+}
+.selectedBox .peopleitem + .peopleitem {
+  margin-top: 10px;
+}
+.userPicker {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.userPicker .treeContent,
+.userPicker .tableContent,
+.userPicker .choosePeopleContent {
+  float: left;
+}
+.userPicker .el-tree-node__content > .el-checkbox.is-disabled {
+  display: none !important;
+}
+.userPicker .clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.userPicker .clearfix {
+  zoom: 1;
+}
+.userPicker .treeContent {
+  position: absolute;
+  top: 0px;
+  bottom: 35px;
+  overflow: scroll;
+  left: 0px;
+  padding: 0 10px;
+  margin: 15px 0;
+}
+.userPicker .treeContent::-webkit-scrollbar {
+  width: 0px;
+}
+.userPicker .tableContent {
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  position: absolute;
+  top: 0px;
+  bottom: 35px;
+  overflow: scroll;
+}
+.userPicker .tableContent::-webkit-scrollbar {
+  width: 0px;
+}
+.userPicker .choosePeopleContent {
+  position: absolute;
+  top: 0px;
+  bottom: 35px;
+  right: 0px;
+  overflow: scroll;
+}
+.userPicker .choosePeopleContent::-webkit-scrollbar {
+  width: 0px;
+}
+.userPicker .btnBox {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  right: 20px;
+  text-align: right;
+}
+.infoBox {
+  background: white;
+  padding: 20px 10px;
+}
+.infoBox /deep/ .el-form-item__label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555 !important;
+  font-family: 'Microsoft YaHei' !important;
+}
+.infoBox /deep/ .bv-upload {
+  line-height: 28px;
+}
+.infoBox .areaLine {
+  float: left;
+  width: 100%;
+  height: 3px;
+  background: -webkit-linear-gradient(to right, #70a1ff, #dda8ef);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(to right, #70a1ff, #dda8ef);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(to right, #70a1ff, #dda8ef);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #70a1ff, #dda8ef);
+  /* 标准的语法 */
+}
+.infoBox .areaName {
+  float: left;
+  min-width: 100px;
+  color: white;
+  background-color: #70a1ff;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  padding: 0px 15px 0 15px;
+  height: 30px;
+  line-height: 27px;
+  font-size: 14px;
+}
+.multiRowTable .el-table__row:hover > td {
+  background-color: white;
+}
+.pageList .el-table {
+  border-top: 1px solid #ebeef5 !important;
+  border-left: 1px solid #ebeef5 !important;
+}
+.pageList .el-table::before {
+  width: 0;
+}
+.pageList .el-table td,
+.pageList .el-table th.is-leaf {
+  border-bottom: 1px solid #ebeef5 !important;
+  border-right: 1px solid #ebeef5 !important;
+}
+.pageList .el-checkbox__inner {
+  width: 16px;
+  height: 16px;
+}
+.pageList .el-checkbox__inner::after {
+  top: 2px;
+  left: 5px;
+}
+.pageList .page-wrap {
+  padding: 30px 0;
+}
+.pageList .el-pagination {
+  text-align: center;
+  color: #000;
+}
+.pageList .el-pagination .el-pagination__total,
+.pageList .el-pager .number {
+  font-size: 15px;
+}
+.pageList .el-pager .number {
+  font-weight: normal;
+}
+.pageList .el-pagination button span {
+  padding: 0 10px;
+}
+.pageList .blue {
+  color: #1a8aff;
+}
+.query .search {
+  background: #fff;
+  padding: 15px;
+  min-height: 33px;
+  margin-bottom: 12px;
+  border-left: 5px solid #409eff;
+}
+.query .search .searchLabel {
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+.query .search .searchLeft .el-input {
+  width: 220px;
+  height: 38px;
+}
+.query .search .searchLeft .el-input input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.query .search .searchLeft p.searchBth {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.query .search .searchBtns {
+  margin-top: 5px;
+}
+.query .AdvanceSearch {
+  background-color: #fff;
+  padding: 20px 15px 1px;
+  margin-bottom: 12px;
+}
+.query .AdvanceSearch .AdvanceSearchItem .el-form-item__label {
+  line-height: 1.3;
+  margin-top: 13px;
+}
+.query .AdvanceSearch .AdvanceSearchBthClass {
+  text-align: right;
+  margin-top: 10px;
+}
+.query .el-date-editor--datetimerange.el-input,
+.query .el-date-editor--datetimerange.el-input__inner {
+  width: 100%;
+}
+.tabsBox {
+  background: white;
+  padding: 20px;
+}

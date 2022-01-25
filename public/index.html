@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>static/ztree/3.5/zTreeStyle.css" /> -->
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>static/css/ivc.css"/>
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>static/css/index.css"/>
+    <script>
+      if (!window.crypto) {
+        window.crypto = window.msCrypto
+      }
+    </script>
+  </head>
+  <body>
+    <script src="<%= BASE_URL %>static/jquery-1.8.2.min.js"></script>
+    <!-- <script src="<%= BASE_URL %>static/ztree/3.5/jquery.ztree.all-3.5.min.js"></script>
+    <script src="<%= BASE_URL %>static/belvoly/beyondbit.min.js"></script>
+    <script src="<%= BASE_URL %>static/belvoly/beyondbit-zh-CN.js"></script> -->
+    <script src="<%= BASE_URL %>web.config.js"></script>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

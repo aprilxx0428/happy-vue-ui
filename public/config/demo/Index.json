@@ -1,0 +1,102 @@
+{   
+    "isSearchShow": true,
+    "isPaginationShow": true,
+    "searchContentLabel": {"text":"这是一个显示的label", "visible": true, "style":"width:180px"},
+    "searchContent": {"title": "标题2222", "placeholder": "标题", "type": "input", "prop": "address","handle":"handleAdvanceSearch","visible": false},
+    "searchBtns": [
+        {"label":"新增","type": "primary", "handle":"handleAdd", "visible": true},
+        {"label":"批量删除","type": "danger", "handle":"handleBatchDelete", "visible": true}
+    ],
+    "isAdvanceSearchShow": true,
+    "advanceSearchDisplayStatus": true,
+    "advanceSearchLable": "100px",
+    "advanceSearchContent": [
+        {
+            "category": "input","label":"input文本框","col": 24,"prop":"demo_input_prepred","visible":true,
+            "basic":{"placeholder":"请输入文本框内容，最长五个字符","type":"text","maxlength":"5","minlength":"3"
+            }
+        },
+        {
+            "category": "input","label":"前后缀input文本框","col": 24,"prop":"demo_input_prepred","visible":true,
+            "basic":{"placeholder":"请输入文本框内容，最长五个字符","type":"text","maxlength":"5","minlength":"3",
+                "slot":[
+                    {"position":"prepend","slotText":"http://","slotProp":"slotValue"},
+                    {"position":"append","slotText":".com","slotProp":"slotValue"}
+                ]
+            }
+        },
+        {
+            "category": "slot","slotName":"list2","label":"","visible":true
+        },
+        {
+            "category": "date","label":"通知时间","col": 12, "prop":"dateRange","startProp":"startDateTime","endProp":"endDateTime", "visible":true, 
+            "basic":{"type":"daterange","placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd","valueformat":"yyyy-MM-dd","align": "center"}
+        },
+        {
+            "category": "input","label":"内容","col": 12,"prop":"content","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text"}
+        },
+        {
+            "label":"下拉框","col": 10, "prop":"demo_funselect1","category": "select", "visible":true,"labelWidth":"100px",
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "normal","filterable":true},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{
+                "dataList":[
+                {"text":"下拉框1","val":"1"},
+                {"text":"下拉框2","val":"2"},
+                {"text":"下拉框3","val":"3"}
+                ],
+                "defaultItem":{"text":"所有","val":""}},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "label":"下拉框多选","col": 12, "prop":"demo_select_multiple","category": "select", "visible":true,
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "normal","filterable":true,"multiple":"true"},
+            "options":{"label":"text","value":"val"},
+            "dataSource":{"dataList":[{"text":"下拉框1","val":"1"},{"text":"下拉框2","val":"2"},{"text":"下拉框3","val":"3"}]},
+            "rules":{
+                "required": false, "message": "请选择", "trigger": "change"
+            }
+        },
+        {
+            "category":"button","label":"","col":2,"handle":"pickMainMeeting","labelWidth":"10px","visible":true,"style":"margin-left:0px;",
+            "basic":{
+                "type":"primary","label":"选择组织","size":"normal"
+            }
+        }
+    ],
+    "advanceSearchBtns": [
+        {"label":"查询","type": "primary", "handle":"handleAdvanceSearch", "visible": true},
+        {"label":"导出","type": "primary", "handle":"handleExport", "visible": true},
+        {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+    ],
+
+    "showCheckBox": true,
+    "tableHeadAlign": "center",
+    "isShowTableOperatorBtns": true,
+    "tableColumn":[
+        {"type":"selection","width":"60", "align": "center", "visible": true},
+        {"label":"序","type":"index", "width": "60", "align": "center", "visible": true},
+        {"label":"标题","prop":"title", "align": "left","isNeedClick":"true","handle":"toLink","hoverCss":"hoverRed","visible": true},
+        {"label":"公告时间","prop":"noticeTime", "width":"120","isEllipsis": true, "align": "left", "visible": true},
+        {"label":"公告范围","prop":"range", "width":"150", "align": "left","isEllipsis": true, "visible": true},
+        {"label":"排序号","prop":"sequence","width":"100", "align": "center", "visible": true, "isNeedEdit": true, "handle":"tableInputBlur"},
+        {"label":"是否置顶","prop":"isTopText","width":"100","align": "center", "visible": true,"isNeedPopover":{
+            "placement":"bottom","title":"","width":"200","trigger":"hover","slotName":"statusBarSlot"
+        }},
+        {"label":"slot自定义内容","prop":"createUserAccout","width":"80", "align": "center", "visible": true,"slotName":"listImgSlot"},
+        {"label":"发布时间","prop":"createDateTime", "width":"100","visible": true, "align": "center","formatStr":"YYYY-MM-DD"}
+    ],
+    "operatorBtnsAlign": "center",
+    "operatorBtns":[
+        {"label":"查看","icon":"iconchakan","handle":"handleShow", "visible": true,"width":120,
+            "showCondition":{
+                "prop":"range","value":"['111','奉贤区']"
+            }
+        },
+        {"label":"编辑","icon":"iconedit","handle":"handleEdit", "visible": true},
+        {"label":"删除","icon":"iconshanchu", "handle":"handleDelete", "visible": false}
+    ]
+}

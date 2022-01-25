@@ -1,0 +1,18 @@
+{
+    "label":"选组织",
+    "separator": ",",
+    "saveHandle": "saveMainMeeting",
+    "cancelHandle":"cancelMainMeeting",
+    "tree":{
+        "selectedProp": ["name","code"],
+        "propName": ["name","code"],
+        "nodeKey": "code",
+        "showProp": "name",
+        "dataSource":{
+            "from": "dictionary",
+            "code": "ZBHBDW_FXQ",
+            "onlyEndCheck": "true",
+            "dataList": []
+        }
+    }
+}

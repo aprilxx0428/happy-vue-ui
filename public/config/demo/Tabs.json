@@ -1,0 +1,35 @@
+{   
+    "isSearchShow": true,
+    "isSearchContentShow": true,
+    "isOperatorBtnsShow": true,
+    "isPaginationShow": true,
+    "searchContent": {"title": "标题", "placeholder": "标题", "type": "input", "prop": "title","handle":"handleAdvanceSearch"},
+    "searchBtns": [
+        {"label":"新增","type": "primary", "handle":"handleAdd", "visible": true},
+        {"label":"批量删除","type": "danger", "handle":"handleBatchDelete", "visible": true}
+    ],
+    "isAdvanceSearchShow": true,
+    "advanceSearchLable": "100px",
+    "advanceSearchContent": [
+        {
+            "category": "input","label":"标题","col": 12,"prop":"title","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text"}
+        },
+        {
+            "category": "date","label":"通知时间","col": 12, "prop":"dateRange","startProp":"startDateTime","endProp":"endDateTime", "visible":true, 
+            "basic":{"type":"daterange","placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd","valueformat":"yyyy-MM-dd","align": "center"}
+        },
+        {
+            "category": "input","label":"内容","col": 12,"prop":"content","visible":true,
+            "basic":{"placeholder":"请输入文本框内容","type":"text"}
+        }
+    ],
+    "advanceSearchBtns": [
+        {"label":"查询","type": "primary", "handle":"handleAdvanceSearch", "visible": true},
+        {"label":"导出","type": "primary", "handle":"handleExport", "visible": true},
+        {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+    ],
+    "tabs":{
+        "type":"card","activeName":"tab2","tabPanel":[{"name":"tab1","label":"tab一","slotName":"tab1"},{"name":"tab2","label":"tab二","slotName":"tab2"},{"name":"tab3","label":"tab三","slotName":"tab3"}]
+    }
+}

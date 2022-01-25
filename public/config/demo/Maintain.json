@@ -1,0 +1,64 @@
+{   
+    "isSearchShow": true,
+    "searchContent": {"title": "标题", "placeholder": "标题", "type": "input", "prop": "title","handle":"handleAdvanceSearch"},
+    "searchBtns": [
+        {"label":"导出议案","type": "primary", "handle":"handleAdd", "visible": true},
+        {"label":"删除","type": "danger", "handle":"handleBatchDelete", "visible": true}
+    ],
+    "isAdvanceSearchShow": true,
+    "advanceSearchLable": "100px",
+    "advanceSearchContent": [
+        {
+            "category": "input","label":"标题","col": 12,"prop":"title","visible":true,
+            "basic":{"placeholder":"标题","type":"text"}
+        },
+        {
+            "category": "input","label":"届次/年度","col": 12,"prop":"termTime","visible":true,
+            "basic":{"placeholder":"届次/年度","type":"text"}
+        },
+        {
+            "category": "input","label":"领衔代表","col": 12,"prop":"proposerName","visible":true,
+            "basic":{"placeholder":"领衔代表","type":"text"}
+        },
+        {
+            "category": "input","label":"联名提出议案的代表","col": 12,"prop":"member","visible":true,
+            "basic":{"placeholder":"联名提出议案的代表","type":"text"}
+        },
+        {
+            "label":"代表组","col": 12, "prop":"memGroup","category": "select","visible":true,
+            "basic":{"placeholder":"请选择", "disabled": false, "size": "small","filterable":true},  
+            "dataSource":{"from":"dictionary","code":"UNPC_MYD"},
+            "options":{"label":"name","value":"value"}
+        },
+        {
+            "category": "date","label":"议案时间","col": 12, "prop":"congressStage","startProp":"During","endProp":"Closed", "visible":true, 
+            "basic":{"type":"daterange","placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM-dd","valueformat":"yyyy-MM-dd","align": "center"}
+        }
+    ],
+    "advanceSearchBtns": [
+        {"label":"查询","type": "primary", "handle":"handleAdvanceSearch", "visible": true},
+        {"label":"导出","type": "primary", "handle":"handleExport", "visible": true},
+        {"label":"重置","type": "", "handle":"handleReset", "visible": true}
+    ],
+
+    "showCheckBox": true,
+    "tableHeadAlign": "center",
+    "isShowTableOperatorBtns": false,
+    "tableColumn":[
+        {"type":"selection","width":"60", "align": "center", "visible": true},
+        {"label":"序","type":"index", "width": "60", "align": "center", "visible": true},
+        {"label":"标题","prop":"title", "width": "300", "align": "left","isNeedClick":"true","handle":"toLink","hoverCss":"hoverRed","visible": true},
+        {"label":"届次/年度","prop":"termTime", "width":"120", "align": "left", "visible": true},
+        {"label":"领衔代表","prop":"range", "width":"220", "align": "left","isEllipsis": true, "visible": true},
+        {"label":"排序号","prop":"sequence", "align": "center", "visible": true, "isNeedEdit": true, "handle":"tableInputBlur"},
+        {"label":"是否置顶","prop":"isTopText", "align": "center", "visible": true},
+        {"label":"发布人","prop":"createUserAccout", "align": "center", "visible": true},
+        {"label":"发布时间","prop":"startDateTime", "visible": true, "align": "center"}
+    ],
+    "operatorBtnsAlign": "center",
+    "operatorBtns":[
+        {"label":"查看","icon":"iconchakan","handle":"handleShow", "visible": false},
+        {"label":"编辑","icon":"iconedit","handle":"handleEdit", "visible": true},
+        {"label":"删除","icon":"iconshanchu", "handle":"handleDelete", "visible": true}
+    ]
+}

@@ -1,0 +1,53 @@
+{
+
+    "label":"选择人员",
+    "separator": ",",
+    "saveHandle": "saveOfficeUsers",
+    "cancelHandle": "cancelOfficeUser",
+    "tree":{
+        "width": "20%",
+        "selectedProp": "label",
+        "nodeKey": "id",
+        "dataSource":{
+            "dataList": [
+                {
+                    "id": 3 ,
+                    "label": "全体机关人员",
+                    "disabled": true,
+                    "from": "json",
+                    "searchParam": "type",
+                    "value":"all",
+                    "children": [{
+                        "id": 4 ,
+                        "label": "人大机关",
+                        "disabled": false
+                        }, {
+                        "id": 5,
+                        "label": "街镇",
+                        "disabled": false
+                        }
+                    ]  
+                }
+            ]
+        }
+    },
+    "selectArea":{
+        "isSearchShow": true,
+        "searchContent": {"title": "姓名", "placeholder": "请输入姓名", "type": "input", "prop": "name","handle": "queryOfficeUsers"},
+        "isAdvanceSearchShow": false,
+        "showCheckBox": true,
+        "tableHeadAlign": "center",
+        "width": "60%",
+        "apiParams": "type",
+        "handle": "queryOfficeUsers",
+        "showProp":"name",
+        "keyProp":"id",
+        "tableColumn":[
+            {"type":"selection","width":"60", "align": "center", "visible": true},
+            {"label":"人员类别","prop":"type", "align": "center", "visible": true},
+            {"label":"姓名","prop":"name", "width":"120", "align": "center", "visible": true},
+            {"label":"科室","prop":"userPost", "align": "center", "visible": true}
+        ]
+    }
+}
+

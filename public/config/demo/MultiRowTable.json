@@ -1,0 +1,20 @@
+
+    {
+        "addRow":{"label":"添加联络人","type":"text","divStyle":"width:100px;float:right;","size":"mini"},
+        "tableColumn":[
+            {
+                "category": "date","label":"节点时间","col": 12, "prop":"demo_dateRange","startProp":"demo_dateRangeStart","endProp":"demo_dateRangeEnd", "showLabel":false,"visible":true, 
+                "basic":{"type":"daterange","placeholder":"选择日期","rangeSeparator": "-", "startPlaceholder": "开始日期","endPlaceholder": "结束日期","editable":true, "clearable": true, "size": "normal", "format":"yyyy-MM","valueformat":"yyyy-MM","align": "center"},
+                "rules":{
+                    "required": false, "message": "请选择日期", "trigger": "change"
+                }
+            },
+            {
+                "category": "input","label":"节点目标","col": 24,"prop":"contact_postInput","visible":true,"showLabel":false,"style":"margin-bottom:0px","align":"center",
+                "basic":{"placeholder":"职务","type":"text"},
+                "rules":{"required": false,
+                    "message": "请输入标题",
+                    "trigger": "blur"}
+            }
+        ]
+    }
